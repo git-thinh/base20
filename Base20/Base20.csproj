@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4045015A-9A6F-4144-80A0-B38A6B9932DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Base20</RootNamespace>
+    <AssemblyName>Base20</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET20</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DocumentStatic.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\ByteArray.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\ByteString.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\CodedInputStream.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\CodedOutputStream.ComputeSize.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\CodedOutputStream.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Collections\MapField.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Collections\ReadOnlyDictionary.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Collections\RepeatedField.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Compatibility\PropertyInfoExtensions.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Compatibility\TypeExtensions.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\FieldCodec.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\FrameworkPortability.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\ICustomDiagnosticMessage.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\IDeepCloneable.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\IMessage.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\InvalidJsonException.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\InvalidProtocolBufferException.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\JsonFormatter.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\JsonParser.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\JsonToken.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\JsonTokenizer.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\LimitedInputStream.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\MessageExtensions.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\MessageParser.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\ProtoPreconditions.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\Descriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\DescriptorBase.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\DescriptorPool.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\DescriptorUtil.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\DescriptorValidationException.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\EnumDescriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\EnumValueDescriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\FieldAccessorBase.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\FieldDescriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\FieldType.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\FileDescriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\GeneratedClrTypeInfo.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\IDescriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\IFieldAccessor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\MapFieldAccessor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\MessageDescriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\MethodDescriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\OneofAccessor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\OneofDescriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\OriginalNameAttribute.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\PackageDescriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\PartialClasses.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\ReflectionUtil.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\RepeatedFieldAccessor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\ServiceDescriptor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\SingleFieldAccessor.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\TypeRegistry.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Any.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\AnyPartial.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Api.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Duration.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\DurationPartial.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Empty.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\FieldMask.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\FieldMaskPartial.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\SourceContext.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Struct.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\TimeExtensions.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Timestamp.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\TimestampPartial.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Type.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\ValuePartial.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Wrappers.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\WrappersPartial.cs" />
+    <Compile Include="Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WireFormat.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\CssSelector.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\ExtensionMethods.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\NodeExtensionMethods.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\PseudoClass.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\PseudoClassNameAttribute.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\PseudoClassSelectors\FirstChildPseudoClass.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\PseudoClassSelectors\LastChildPseudoClass.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\PseudoClassSelectors\NotPseudoClass.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\PseudoClassSelectors\NthChildPseudoClass.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Selectors\AllSelector.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Selectors\AttributeSelector.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Selectors\ClassNameSelector.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Selectors\IdSelector.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Selectors\ImediateChildrenSelector.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Selectors\PseudoClassSelector.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Selectors\SiblingImediateSelector.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Selectors\SiblingSelector.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Selectors\TagNameSelector.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Token.cs" />
+    <Compile Include="HtmlAgilityPack.CssSelectors\Tokenizer.cs" />
+    <Compile Include="HtmlAgilityPack\crc32.cs" />
+    <Compile Include="HtmlAgilityPack\EncodingFoundException.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlAttribute.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlAttributeCollection.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlCmdLine.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlCommentNode.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlConsoleListener.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlDocument.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlDocument.PathMethods.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlDocument.Xpath.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlElementFlag.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlEntity.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNameTable.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNode.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNode.Encapsulator.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNode.Xpath.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNodeCollection.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNodeNavigator.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNodeType.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlParseError.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlParseErrorCode.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlTextNode.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlWeb.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlWeb.Xpath.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlWebException.cs" />
+    <Compile Include="HtmlAgilityPack\InvalidProgramException.cs" />
+    <Compile Include="HtmlAgilityPack\IOLibrary.cs" />
+    <Compile Include="HtmlAgilityPack\Metro\HtmlWeb.cs" />
+    <Compile Include="HtmlAgilityPack\Metro\InvalidProgramException.cs" />
+    <Compile Include="HtmlAgilityPack\MixedCodeDocument.cs" />
+    <Compile Include="HtmlAgilityPack\MixedCodeDocumentCodeFragment.cs" />
+    <Compile Include="HtmlAgilityPack\MixedCodeDocumentFragment.cs" />
+    <Compile Include="HtmlAgilityPack\MixedCodeDocumentFragmentList.cs" />
+    <Compile Include="HtmlAgilityPack\MixedCodeDocumentFragmentType.cs" />
+    <Compile Include="HtmlAgilityPack\MixedCodeDocumentTextFragment.cs" />
+    <Compile Include="HtmlAgilityPack\NameValuePair.cs" />
+    <Compile Include="HtmlAgilityPack\NameValuePairList.cs" />
+    <Compile Include="HtmlAgilityPack\Trace.cs" />
+    <Compile Include="HtmlAgilityPack\Trace.FullFramework.cs" />
+    <Compile Include="HtmlAgilityPack\Utilities.cs" />
+    <Compile Include="HttpServer\HttpServer\Authentication\AuthenticationModule.cs" />
+    <Compile Include="HttpServer\HttpServer\Authentication\BasicAuthentication.cs" />
+    <Compile Include="HttpServer\HttpServer\Authentication\DigestAuthentication.cs" />
+    <Compile Include="HttpServer\HttpServer\Check.cs" />
+    <Compile Include="HttpServer\HttpServer\ClientAcceptedEventArgs.cs" />
+    <Compile Include="HttpServer\HttpServer\ComponentProvider.cs" />
+    <Compile Include="HttpServer\HttpServer\ContentTypes.cs" />
+    <Compile Include="HttpServer\HttpServer\ExceptionEventArgs.cs" />
+    <Compile Include="HttpServer\HttpServer\ExceptionHandler.cs" />
+    <Compile Include="HttpServer\HttpServer\Exceptions\BadRequestException.cs" />
+    <Compile Include="HttpServer\HttpServer\Exceptions\ForbiddenException.cs" />
+    <Compile Include="HttpServer\HttpServer\Exceptions\HttpException.cs" />
+    <Compile Include="HttpServer\HttpServer\Exceptions\InternalServerException.cs" />
+    <Compile Include="HttpServer\HttpServer\Exceptions\NotFoundException.cs" />
+    <Compile Include="HttpServer\HttpServer\Exceptions\UnauthorizedException.cs" />
+    <Compile Include="HttpServer\HttpServer\FormDecoders\FormDecoder.cs" />
+    <Compile Include="HttpServer\HttpServer\FormDecoders\FormDecoderProvider.cs" />
+    <Compile Include="HttpServer\HttpServer\FormDecoders\HttpMultipart.cs" />
+    <Compile Include="HttpServer\HttpServer\FormDecoders\IFormDecoder.cs" />
+    <Compile Include="HttpServer\HttpServer\FormDecoders\MultipartDecoder.cs" />
+    <Compile Include="HttpServer\HttpServer\FormDecoders\UrlDecoder.cs" />
+    <Compile Include="HttpServer\HttpServer\FormDecoders\XmlDecoder.cs" />
+    <Compile Include="HttpServer\HttpServer\Helpers\FormHelper.cs" />
+    <Compile Include="HttpServer\HttpServer\Helpers\GetIdTitle.cs" />
+    <Compile Include="HttpServer\HttpServer\Helpers\Implementations\PrototypeImp.cs" />
+    <Compile Include="HttpServer\HttpServer\Helpers\IniReader.cs" />
+    <Compile Include="HttpServer\HttpServer\Helpers\JSHelper.cs" />
+    <Compile Include="HttpServer\HttpServer\Helpers\ObjectForm.cs" />
+    <Compile Include="HttpServer\HttpServer\Helpers\ResourceInfo.cs" />
+    <Compile Include="HttpServer\HttpServer\Helpers\ResourceManager.cs" />
+    <Compile Include="HttpServer\HttpServer\Helpers\WebHelper.cs" />
+    <Compile Include="HttpServer\HttpServer\Helpers\XmlHelper.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpClientContext.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpContextFactory.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpFile.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpForm.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpHelper.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpInput.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpInputItem.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpListener.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpListenerBase.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpModules\HttpModule.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpModules\HttpModuleExceptionEventArgs.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpModules\ResourceFileModule.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpModules\ReverseProxyModule.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpModules\SimpleCommonGatewayInterfaceModule.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpModules\WebSiteModule.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpParam.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpRequest.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpResponse.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpServer.cs" />
+    <Compile Include="HttpServer\HttpServer\IComponentProvider.cs" />
+    <Compile Include="HttpServer\HttpServer\IHttpClientContext.cs" />
+    <Compile Include="HttpServer\HttpServer\IHttpContextHandler.cs" />
+    <Compile Include="HttpServer\HttpServer\IHttpRequest.cs" />
+    <Compile Include="HttpServer\HttpServer\IHttpRequestParser.cs" />
+    <Compile Include="HttpServer\HttpServer\IHttpResponse.cs" />
+    <Compile Include="HttpServer\HttpServer\ILogWriter.cs" />
+    <Compile Include="HttpServer\HttpServer\Method.cs" />
+    <Compile Include="HttpServer\HttpServer\Parser\BodyEventArgs.cs" />
+    <Compile Include="HttpServer\HttpServer\Parser\HeaderEventArgs.cs" />
+    <Compile Include="HttpServer\HttpServer\Parser\HttpRequestParser.cs" />
+    <Compile Include="HttpServer\HttpServer\Parser\RequestLineEventArgs.cs" />
+    <Compile Include="HttpServer\HttpServer\Parser\RequestParserFactory.cs" />
+    <Compile Include="HttpServer\HttpServer\RequestCookie.cs" />
+    <Compile Include="HttpServer\HttpServer\RequestCookies.cs" />
+    <Compile Include="HttpServer\HttpServer\RequestQueue.cs" />
+    <Compile Include="HttpServer\HttpServer\RequestReceivedEventArgs.cs" />
+    <Compile Include="HttpServer\HttpServer\ResponseCookie.cs" />
+    <Compile Include="HttpServer\HttpServer\ResponseCookies.cs" />
+    <Compile Include="HttpServer\HttpServer\Rules\IRule.cs" />
+    <Compile Include="HttpServer\HttpServer\Rules\RedirectRule.cs" />
+    <Compile Include="HttpServer\HttpServer\Rules\RegexRedirectRule.cs" />
+    <Compile Include="HttpServer\HttpServer\Rules\Rule.cs" />
+    <Compile Include="HttpServer\HttpServer\Sessions\HttpSession.cs" />
+    <Compile Include="HttpServer\HttpServer\Sessions\HttpSessionStore.cs" />
+    <Compile Include="HttpServer\HttpServer\Sessions\IHttpSession.cs" />
+    <Compile Include="HttpServer\HttpServer\Sessions\IHttpSessionStore.cs" />
+    <Compile Include="HttpServer\HttpServer\Sessions\MemorySession.cs" />
+    <Compile Include="HttpServer\HttpServer\Sessions\MemorySessionStore.cs" />
+    <Compile Include="HttpServer\HttpServer\Templates\SmartyEngine.cs" />
+    <Compile Include="HttpServer\HttpServer\Templates\TemplateEngine.cs" />
+    <Compile Include="HttpServer\HttpServer\Templates\TinyTemplate.cs" />
+    <Compile Include="MMF\FileMapIOException.cs" />
+    <Compile Include="MMF\MapViewStream.cs" />
+    <Compile Include="MMF\MemoryMappedFile.cs" />
+    <Compile Include="MMF\Win32APIs.cs" />
+    <Compile Include="mustache\ArgumentCollection.cs" />
+    <Compile Include="mustache\CompoundGenerator.cs" />
+    <Compile Include="mustache\ConditionTagDefinition.cs" />
+    <Compile Include="mustache\ContentTagDefinition.cs" />
+    <Compile Include="mustache\Context.cs" />
+    <Compile Include="mustache\ContextParameter.cs" />
+    <Compile Include="mustache\EachTagDefinition.cs" />
+    <Compile Include="mustache\ElifTagDefinition.cs" />
+    <Compile Include="mustache\ElseTagDefinition.cs" />
+    <Compile Include="mustache\FormatCompiler.cs" />
+    <Compile Include="mustache\Generator.cs" />
+    <Compile Include="mustache\HtmlFormatCompiler.cs" />
+    <Compile Include="mustache\IArgument.cs" />
+    <Compile Include="mustache\IfTagDefinition.cs" />
+    <Compile Include="mustache\IGenerator.cs" />
+    <Compile Include="mustache\IndexTagDefinition.cs" />
+    <Compile Include="mustache\InlineGenerator.cs" />
+    <Compile Include="mustache\InlineTagDefinition.cs" />
+    <Compile Include="mustache\KeyFoundEventArgs.cs" />
+    <Compile Include="mustache\KeyGenerator.cs" />
+    <Compile Include="mustache\KeyNotFoundEventArgs.cs" />
+    <Compile Include="mustache\MasterTagDefinition.cs" />
+    <Compile Include="mustache\NestedContext.cs" />
+    <Compile Include="mustache\NewlineTagDefinition.cs" />
+    <Compile Include="mustache\NumberArgument.cs" />
+    <Compile Include="mustache\PlaceholderArgument.cs" />
+    <Compile Include="mustache\PlaceholderFoundEventArgs.cs" />
+    <Compile Include="mustache\PropertyDictionary.cs" />
+    <Compile Include="mustache\RegexHelper.cs" />
+    <Compile Include="mustache\Scope.cs" />
+    <Compile Include="mustache\SetTagDefinition.cs" />
+    <Compile Include="mustache\StaticGenerator.cs" />
+    <Compile Include="mustache\StringArgument.cs" />
+    <Compile Include="mustache\Substitution.cs" />
+    <Compile Include="mustache\TagDefinition.cs" />
+    <Compile Include="mustache\TagFormattedEventArgs.cs" />
+    <Compile Include="mustache\TagParameter.cs" />
+    <Compile Include="mustache\UpcastDictionary.cs" />
+    <Compile Include="mustache\ValueRequestEventArgs.cs" />
+    <Compile Include="mustache\VariableArgument.cs" />
+    <Compile Include="mustache\VariableFoundEventArgs.cs" />
+    <Compile Include="mustache\WithTagDefinition.cs" />
+    <Compile Include="mustache\_config.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System.Linq\DeepCopy.Assign.cs" />
+    <Compile Include="System.Linq\IsNumber.cs" />
+    <Compile Include="System.Linq\LinqExt.cs" />
+    <Compile Include="System.Linq\Lucene.Net.cs" />
+    <Compile Include="System.Linq\System.Collections.Generic\HashSet.cs" />
+    <Compile Include="System.Linq\System.Collections.Generic\ISet.cs" />
+    <Compile Include="System.Linq\System.Data.Linq\MonoTODOAttribute.cs" />
+    <Compile Include="System.Linq\System.Linq.Dynamic\System.Linq.Dynamic.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\BinaryExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\ConditionalExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\ConstantExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\ElementInit.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\EmitContext.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\Expression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\ExpressionPrinter.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\ExpressionTransformer.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\ExpressionType.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\ExpressionVisitor.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\Expression_T.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\Extensions.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\InvocationExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\LambdaExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\ListInitExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\MemberAssignment.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\MemberBinding.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\MemberBindingType.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\MemberExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\MemberInitExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\MemberListBinding.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\MemberMemberBinding.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\MethodCallExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\NewArrayExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\NewExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\ParameterExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\TypeBinaryExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Expressions\UnaryExpression.cs" />
+    <Compile Include="System.Linq\System.Linq.Ext.cs" />
+    <Compile Include="System.Linq\System.Linq\Check.cs" />
+    <Compile Include="System.Linq\System.Linq\Enumerable.cs" />
+    <Compile Include="System.Linq\System.Linq\Grouping.cs" />
+    <Compile Include="System.Linq\System.Linq\IGrouping.cs" />
+    <Compile Include="System.Linq\System.Linq\ILookup_T.cs" />
+    <Compile Include="System.Linq\System.Linq\IOrderedEnumerable_T.cs" />
+    <Compile Include="System.Linq\System.Linq\IOrderedQueryable.cs" />
+    <Compile Include="System.Linq\System.Linq\IOrderedQueryable_T.cs" />
+    <Compile Include="System.Linq\System.Linq\IQueryable.cs" />
+    <Compile Include="System.Linq\System.Linq\IQueryable_T.cs" />
+    <Compile Include="System.Linq\System.Linq\IQueryProvider.cs" />
+    <Compile Include="System.Linq\System.Linq\Lookup.cs" />
+    <Compile Include="System.Linq\System.Linq\OrderedEnumerable.cs" />
+    <Compile Include="System.Linq\System.Linq\OrderedSequence.cs" />
+    <Compile Include="System.Linq\System.Linq\Queryable.cs" />
+    <Compile Include="System.Linq\System.Linq\QueryableEnumerable.cs" />
+    <Compile Include="System.Linq\System.Linq\QueryableTransformer.cs" />
+    <Compile Include="System.Linq\System.Linq\QuickSort.cs" />
+    <Compile Include="System.Linq\System.Linq\SortContext.cs" />
+    <Compile Include="System.Linq\System.Linq\SortDirection.cs" />
+    <Compile Include="System.Linq\System.Linq\SortSequenceContext.cs" />
+    <Compile Include="System.Linq\System.Runtime.CompilerServices\DynamicAttribute.cs" />
+    <Compile Include="System.Linq\System.Runtime.CompilerServices\ExecutionScope.cs" />
+    <Compile Include="System.Linq\System.Runtime.CompilerServices\ExtensionAttribute.cs" />
+    <Compile Include="System.Linq\System.Runtime.CompilerServices\IStrongBox.cs" />
+    <Compile Include="System.Linq\System.Runtime.CompilerServices\StrongBox_T.cs" />
+    <Compile Include="System.Linq\System\Action.cs" />
+    <Compile Include="System.Linq\System\Func.cs" />
+    <Compile Include="System.Linq\Tuple\IStructuralComparable.cs" />
+    <Compile Include="System.Linq\Tuple\IStructuralEquatable.cs" />
+    <Compile Include="System.Linq\Tuple\Tuple.cs" />
+    <Compile Include="System.Threading\ConcurrentDictionary\System\ArrayHelper.cs" />
+    <Compile Include="System.Threading\ConcurrentDictionary\System\Collections\Concurrent\ConcurrentDictionary.cs" />
+    <Compile Include="System.Threading\ConcurrentDictionary\System\Collections\Generic\IReadOnlyCollection.cs" />
+    <Compile Include="System.Threading\ConcurrentDictionary\System\Collections\Generic\IReadOnlyDictionary.cs" />
+    <Compile Include="System.Threading\ConcurrentDictionary\System\PlatformHelper.cs" />
+    <Compile Include="System.Threading\ConcurrentDictionary\System\SR.cs" />
+    <Compile Include="System.Threading\ConcurrentDictionary\System\Threading\Volatile.cs" />
+    <Compile Include="System.Threading\CrossThreadExtensions.cs" />
+    <Compile Include="System.Threading\DictionaryThreadSafe.cs" />
+    <Compile Include="System.Threading\ListThreadSafe.cs" />
+    <Compile Include="System.Threading\QueueThreadSafe.cs" />
+    <Compile Include="System.Threading\ReaderWriterLockSlim.cs" />
+    <Compile Include="System.Threading\ReaderWriterLockSlimExtensions.cs" />
+    <Compile Include="System.Threading\ReadWriteLockSlimExtend.cs" />
+    <Compile Include="System.Threading\StackThreadSafe.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System.Linq\_demo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HtmlAgilityPack.CssSelectors\README.md" />
+    <None Include="mustache\mustache-sharp.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MMF\ReadMe.txt" />
+    <Content Include="mustache\_ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

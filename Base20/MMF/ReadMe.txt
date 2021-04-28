@@ -1,0 +1,1 @@
+﻿Wrapper .NET Library for Win32 Memory Mapped Files API

@@ -1,0 +1,5 @@
+D:\tt\core\base20\Base20\bin\Debug\Base20.dll
+D:\tt\core\base20\Base20\bin\Debug\Base20.pdb
+D:\tt\core\base20\Base20\obj\Debug\Base20.csproj.CoreCompileInputs.cache
+D:\tt\core\base20\Base20\obj\Debug\Base20.dll
+D:\tt\core\base20\Base20\obj\Debug\Base20.pdb
