@@ -9,74 +9,27 @@ using System.Linq;
 
 namespace host.Http.HttpModules
 {
-    /// <summary>
-    /// The purpose of this module is to serve files.
-    /// </summary>
-    public class FileModule : HttpModule
+    public class StaticModule : HttpModule
     {
         private readonly string _baseUri;
         private readonly string _basePath;
-        private readonly bool _useLastModifiedHeader;
         private readonly IDictionary<string, string> _mimeTypes = new Dictionary<string, string>();
-        private static readonly string[] DefaultForbiddenChars = new string[] { "\\", "..", ":" };
-        private string[] _forbiddenChars;
         private static readonly string PathSeparator = Path.DirectorySeparatorChar.ToString();
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FileModule"/> class.
-        /// </summary>
-        /// <param name="baseUri">Uri to serve, for instance "/files/"</param>
-        /// <param name="basePath">Path on hard drive where we should start looking for files</param>
-        /// <param name="useLastModifiedHeader">If true a Last-Modifed header will be sent upon requests urging web browser to cache files</param>
-        public FileModule(string baseUri, string basePath, bool useLastModifiedHeader)
+        public StaticModule(string baseUri, string basePath)
         {
             Check.Require(baseUri, "baseUri");
             Check.Require(basePath, "basePath");
 
-            _useLastModifiedHeader = useLastModifiedHeader;
             _baseUri = baseUri;
             _basePath = basePath;
-            if (!_basePath.EndsWith(PathSeparator))
-                _basePath += PathSeparator;
-            ForbiddenChars = DefaultForbiddenChars;
+            if (!_basePath.EndsWith(PathSeparator)) _basePath += PathSeparator;
 
             if (_mimeTypes.Count == 0) AddDefaultMimeTypes();
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FileModule"/> class.
-        /// </summary>
-        /// <param name="baseUri">Uri to serve, for instance "/files/"</param>
-        /// <param name="basePath">Path on hard drive where we should start looking for files</param>
-        public FileModule(string baseUri, string basePath)
-            : this(baseUri, basePath, false)
-        { }
+        public IDictionary<string, string> MimeTypes { get { return _mimeTypes; } }
 
-        /// <summary>
-        /// List with all mime-type that are allowed. 
-        /// </summary>
-        /// <remarks>All other mime types will result in a Forbidden http status code.</remarks>
-        public IDictionary<string, string> MimeTypes
-        {
-            get { return _mimeTypes; }
-        }
-
-        /// <summary>
-        /// characters that may not  exist in a path.
-        /// </summary>
-        /// <example>
-        /// fileMod.ForbiddenChars = new string[]{ "\\", "..", ":" };
-        /// </example>
-        public string[] ForbiddenChars
-        {
-            get { return _forbiddenChars; }
-            set { _forbiddenChars = value; }
-        }
-
-
-        /// <summary>
-        /// Mimtypes that this class can handle per default
-        /// </summary>
         public void AddDefaultMimeTypes()
         {
             MimeTypes.Add("default", "application/octet-stream");
@@ -122,25 +75,7 @@ namespace host.Http.HttpModules
             MimeTypes.Add("ram", "audio/x-pn-realaudio");
             MimeTypes.Add("aif", "audio/x-aiff");
         }
-
-        /// <summary>
-        /// Determines if the request should be handled by this module.
-        /// Invoked by the <see cref="HttpServer"/>
-        /// </summary>
-        /// <param name="uri"></param>
-        /// <returns>true if this module should handle it.</returns>
-        public bool CanHandle(Uri uri)
-        {
-            if (Contains(uri.AbsolutePath, _forbiddenChars))
-                return false;
-
-            string path = GetPath(uri);
-            return
-                uri.AbsolutePath.StartsWith(_baseUri) && // Correct directory
-                File.Exists(path) && // File exists
-                (File.GetAttributes(path) & FileAttributes.ReparsePoint) == 0; // Not a symlink
-        }
-
+         
         /// <exception cref="BadRequestException">Illegal path</exception>
         private string GetPath(Uri uri)
         {
@@ -152,31 +87,6 @@ namespace host.Http.HttpModules
             return path.Replace('/', Path.DirectorySeparatorChar);
         }
 
-        /// <summary>
-        /// check if source contains any of the chars.
-        /// </summary>
-        /// <param name="source"></param>
-        /// <param name="chars"></param>
-        /// <returns></returns>
-        private static bool Contains(string source, IEnumerable<string> chars)
-        {
-            foreach (string s in chars)
-            {
-                if (source.Contains(s))
-                    return true;
-            }
-
-            return false;
-        }
-
-        /// <summary>
-        /// Method that process the Uri.
-        /// </summary>
-        /// <param name="request">Information sent by the browser about the request</param>
-        /// <param name="response">Information that is being sent back to the client.</param>
-        /// <param name="session">Session used to </param>
-        /// <exception cref="InternalServerException">Failed to find file extension</exception>
-        /// <exception cref="ForbiddenException">File type is forbidden.</exception>
         public override bool Process(IHttpRequest request, IHttpResponse response, IHttpSession session)
         {
             try

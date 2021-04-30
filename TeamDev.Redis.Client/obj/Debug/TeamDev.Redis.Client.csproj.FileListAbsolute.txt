@@ -1,0 +1,5 @@
+C:\tt\base20\TeamDev.Redis.Client\bin\Debug\TeamDev.Redis.dll
+C:\tt\base20\TeamDev.Redis.Client\bin\Debug\TeamDev.Redis.pdb
+C:\tt\base20\TeamDev.Redis.Client\obj\Debug\TeamDev.Redis.Client.csproj.CoreCompileInputs.cache
+C:\tt\base20\TeamDev.Redis.Client\obj\Debug\TeamDev.Redis.dll
+C:\tt\base20\TeamDev.Redis.Client\obj\Debug\TeamDev.Redis.pdb

@@ -212,6 +212,7 @@
     <Compile Include="HttpServer\HttpServer\HttpInputItem.cs" />
     <Compile Include="HttpServer\HttpServer\HttpListener.cs" />
     <Compile Include="HttpServer\HttpServer\HttpListenerBase.cs" />
+    <Compile Include="HttpServer\HttpServer\HttpModules\FileModule.cs" />
     <Compile Include="HttpServer\HttpServer\HttpModules\HttpModule.cs" />
     <Compile Include="HttpServer\HttpServer\HttpModules\HttpModuleExceptionEventArgs.cs" />
     <Compile Include="HttpServer\HttpServer\HttpModules\ResourceFileModule.cs" />
